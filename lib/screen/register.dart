@@ -170,7 +170,7 @@ class _RegisterState extends State<Register> {
           if (value!.isEmpty) {
             return "กรุณากรอก Password ให้ครบ";
           } else if (value != _pass.text) {
-            return "กรุณากรอก Password อย่างน้อย 8 ตัว";
+            return "กรุณากรอก Password อย่างน้อย 9 ตัว";
             return null;
           }
         },
