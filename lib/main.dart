@@ -5,7 +5,8 @@ import 'screen/home.dart';
 import 'screen/index.dart';
 import 'screen/login.dart';
 import 'screen/register.dart';
- 
+import 'screen/dashboard.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,13 +15,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Index(),
       routes: {
-        'Login' : (context) => Login(),
-        'Register' : (context) => Register(),
+        'Login': (context) => Login(),
+        'Register': (context) => Register(),
+        'Dashboard': (context) => Dashboard(),
       },
       theme: ThemeData(
         primaryColor: pColor,
         secondaryHeaderColor: sColor,
-        ),
+      ),
     );
   }
 }

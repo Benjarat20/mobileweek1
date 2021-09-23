@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mobileappweek1/config/backend/batabase.dart';
 import 'package:mobileappweek1/config/constant.dart';
 
 class Register extends StatefulWidget {
@@ -185,15 +187,18 @@ class _RegisterState extends State<Register> {
         style: ElevatedButton.styleFrom(
           primary: pColor,
         ),
+        child: Text('Submit'),
         onPressed: () {
           print("Hello");
+
+          var local = new DBLocal();
+
           if (formKey.currentState!.validate()) {
             formKey.currentState!.save();
-            print(
-                "Name : $name Surname : $surname Emai : $email Password : $password  RePassword : $repassword");
+            local.register(name, surname, email, password);
             formKey.currentState!.reset();
+            Navigator.pushNamed(context, 'Login');
           }
         },
-        child: Text('Submit'),
       );
 }
