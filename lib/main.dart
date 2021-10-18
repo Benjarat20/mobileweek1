@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobileappweek1/config/constant.dart';
+import 'package:mobileappweek1/screen/packageimage.dart';
+import 'package:mobileappweek1/screen/packagelocation.dart';
+import 'package:mobileappweek1/screen/packagevideo.dart';
 
 import 'screen/home.dart';
 import 'screen/index.dart';
@@ -18,6 +21,9 @@ class MyApp extends StatelessWidget {
         'Login': (context) => Login(),
         'Register': (context) => Register(),
         'Dashboard': (context) => Dashboard(),
+        'Image': (context) => PacImage(),
+        'Video': (context) => PacVideo(),
+        'Location': (context) => PacLocation(),
       },
       theme: ThemeData(
         primaryColor: pColor,
